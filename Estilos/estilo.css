@@ -1,0 +1,577 @@
+:root {
+    --main-bg-color: #f7f8fc;
+    --main-contrast-color: #dcdfee;
+    --main-text-color: #878a99;
+    --main-banner-color: #545365;
+    --main-title-color: #202136;
+    --title-font: 'Titillium Web', sans-serif;
+    --text-font: 'Roboto', sans-serif;
+}
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(247,248,252,1) 84%, rgba(220,223,238,1) 100%);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+li {
+    font-family: var(--title-font);
+}
+h2{
+    font-family: var(--title-font);
+}
+a {
+    font-family: var(--title-font);
+}
+h3 {
+    font-family: var(--title-font);
+}
+
+/*----------------------------------------------------------Nav----------------------------------------------------------*/
+
+.navbar {
+    display: flex;
+    background-color:  transparent;
+    justify-content: flex-end;
+}
+.nav-link {
+    color: var(--main-title-color) !important;
+    position: relative;
+}
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: var(--main-title-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.separador {
+    border-top: solid 2px var(--main-title-color);
+    max-width: 50%;
+    margin: 1em auto 0 auto;
+}  
+
+/*----------------------------------------------------------Index----------------------------------------------------------*/
+
+.main-img {
+    background-image: url("/Imagenes/fondo-main-index.jpg");
+    height: 70vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-title {
+    color: var(--main-bg-color);
+    font-size: 2em;
+    text-align: center;
+    
+}
+.main-description {
+    color: white;
+    text-align: center;
+    font-family: var(--text-font);
+}
+
+/*----------------------------------------------------------Servicio Tecnico----------------------------------------------------------*/
+
+.ST_container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ST_description {
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+    align-items: center;  
+}
+.ST_img-container {
+    max-height: 400px;
+    width: 30%;
+    object-fit: contain;
+}
+/*----------------------------------------------------------Relojes----------------------------------------------------------*/
+
+.relojes-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 70vh;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.relojes-imagenes {
+    height: 400px;
+    max-height: fit-content;
+    
+}
+.relojes-descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 300px;
+    width: 40%;
+    
+}
+.relojes-title {
+    color: var(--main-title-color);
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.relojes-item {
+    color: var(--main-text-color);
+    list-style-type: circle;
+}
+.index_btn {
+    margin-top: 1.5em;
+}
+
+
+/*----------------------------------------------------------Camaras----------------------------------------------------------*/
+
+.camaras-container {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.camaras-imagenes {
+    width: 500px;
+    height: 200px;
+}
+.camaras-descripcion {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.camaras-title {
+    color: var(--main-title-color);
+    margin-bottom: 1em;
+    text-align: center;
+}
+.camaras-texto {
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+
+/*----------------------------------------------------------Contacto----------------------------------------------------------*/
+
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+}
+.form-title{
+    padding: 10px;
+    margin-top: 2em;
+}
+.form-container {
+    width: 50%;
+    height: 400px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.form-button{
+    padding: 10px;
+    display: block;
+    background-color: #222;
+    width: 10em;
+    color: white;
+    border-radius: 5px;
+    border-width: 0px;
+}
+.contacto_form-title {
+    text-align: center;
+}
+
+
+
+
+/*------------------------------------------------------------------Relojes-main-------------------------------------------------------*/
+.relojes_main-fondo{
+    background-image: url("/Imagenes/Producto-Fondo-mod.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 70vh;
+    width: 100%;
+}
+.titulo-relojes{
+    height: 2em;
+    width: 60%;
+    text-align: center;
+    border-bottom: solid 1px #aaa;
+    margin: 1em auto 0px auto;
+}
+.card_relojes-container {
+    display: flex;
+    max-height: 200vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 1em auto;
+}
+.card {
+    margin: 1em 1em; 
+}
+.card-title {
+    font-family: var(--title-font);
+    color: var(--main-title-color);
+}
+.card-text {
+    color: var(--main-text-color);
+}
+.card-body {
+    background-color: var(--main-bg-color);
+    
+}
+.btn {
+    background-color: var(--main-banner-color);
+    font-family: var(--title-font);
+}
+/*-------------------------------------------------------------------- relojes 2da mitad-----------------------------------------------*/
+
+.relojes-main_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+    color: var(--main-title-color);
+    height: 500px;
+}
+.relojes-main_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+.relojes-main_text {
+    text-align: center;
+    font-family: var(--text-font);
+    color: var(--main-text-color);
+    font-size: 1em;
+}
+.relojes-main_imagen{
+    position: relative;
+    height: 500px;
+    width: 30%;
+}
+.aim_1 {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    bottom: 15px;
+    left: 50px;
+    z-index: 1;
+}
+.aim_2 {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    right: 50px;
+    z-index: -1;
+}
+
+/*-----------------------------------------------------------------Camras-main-----------------------------------------------------*/
+ 
+.camara-main_fondo {
+    background-image: url("/Imagenes/home-security-camera.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.camara-main_title {
+    color: var(--main-bg-color)
+}
+.camara-main_text {
+    color: var(--main-contrast-color);
+}
+.camara-main_container{
+    height: 50vh;
+    width: 80%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.camara-main_item {
+    display: flex;
+    width: 30%;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1em 1em;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    border: solid 1px var(--main-banner-color);
+    border-radius: 5px;
+    background-color: transparent;
+}
+.camara-card_text {
+    width: 80%;
+}
+.camara-main_button {
+    display: block;
+    width: 15%;
+    margin: 2em auto;
+    
+}
+
+/*-----------------------------------------------------------------contacto-------------------------------------------------------*/
+
+.contacto_fondo-container {
+    background-image: url("/Imagenes/Contacto-Fondo-mod.jpg");
+    background-position: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacto_fondo-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+}
+.contacto_form-container {
+    width: 50%;
+    max-height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacto-title {
+    font-family: 'Titillium Web', sans-serif;
+}
+.contacto_form-title{
+    margin-top: 1em;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--main-title-color);
+    padding-bottom: 0.5em;
+   
+}
+.contacto_form-telephone-container{
+    margin-top: 1em;
+}
+.contacto_form-telephone {
+    font-size: 1.5em;
+    
+    text-decoration: none;
+    color: var(--main-title-color);
+}
+.form-container {
+    width: 100%;
+}
+.form-control {
+    margin: 0.3em;
+}
+.separador {
+    border-top: solid 2px var(--main-title-color);
+    max-width: 50%;
+    margin: 1em auto 0 auto;
+} 
+/*-----------------------------------------------------------------Footer-------------------------------------------------------*/
+
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-banner-color);
+    color: var(--main-bg-color);
+    height: 20vh;
+    width: 100%;
+}
+.footer_contacto {
+    
+    padding: 1em;
+}
+.footer_redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer_link {
+    padding: 5px;
+    margin-bottom: 3px;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+.footer_text {
+    padding: 5px;
+    display: inline;
+}
+
+/*-----------------------------------------------------------------MediaQuery-------------------------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+    /*-------------------------------------------------------index-mobile------------------------------------------------------*/
+    .main-img {
+        height: 40vh;
+        width: 100%;
+        background-size: 100% 100%;  
+        background-attachment: scroll;
+    }
+    .main-description {
+        width: 90%;
+    }
+    .relojes-container {
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    }
+    .relojes-imagenes {
+        height: 30vh;
+        width: 100%;
+    }
+    .relojes-descripcion{
+        width: 90%;
+    }
+    .camaras-imagenes {
+        height: 20vh;
+        width: 80%;
+        flex: 1;
+        order: -1;
+        display: none;
+    }
+    .camaras-container {
+        height: 100vh;
+        width: 100%;
+        
+        
+    }
+    .camaras-descripcion {
+        width: 80%;
+        font-family: var(--text-font);
+        margin: 1em auto;
+    }
+    .ST_container {
+        width: 100%;
+        flex-direction: column;
+        height: 90vh;
+    }
+    .ST_description {
+        width: 90%;
+    }
+    .ST_img-container {
+        width: 80%;
+    }
+
+    /*-------------------------------------------------------relojes-main-mobile------------------------------------------------------*/
+
+    .relojes_main-fondo {
+        height: 40vh;
+        width: 100%;
+        background-size: 100% 100%;
+        background-attachment: scroll;
+        
+    }
+    .card_relojes-container {
+        max-height: 450vh;
+    }
+    
+    .relojes-main_description {
+        margin-top: 2em;
+        width: 90%;
+        height: 30vh;
+    }
+    .relojes-main_imagen {
+        width: 80%;
+        height: 40vh;
+        margin-bottom: 1em;
+    }
+    
+    .aim_1 {
+        height: 175px;
+        width: 235px;
+        top: 10px;
+        
+        left: 60px;
+    }
+    .aim_2 {
+        bottom: 30px;
+        right: 80px;
+        height: 175px;
+        width: 235px;   
+    }
+
+    /*-------------------------------------------------------camara-main-mobile------------------------------------------------------*/
+    .camara-main_fondo{
+        height: 40vh;
+        background-size: 100% 60vh;
+        background-attachment: scroll;
+    }
+    .camara-main_container {
+        flex-direction: column;
+        height: 150vh;
+    }
+    .camara-main_item {
+        width: 90%;
+    }
+    .camara-main_button {
+        width: 40%;
+    }
+    .camara-main_text {
+        text-align: center;
+    }
+    /*-------------------------------------------------------contacto-mobile------------------------------------------------------*/
+    .contacto_fondo-container {
+        height: 40vh;
+        background-size: 100% 100%;
+        background-attachment: scroll;
+    }
+    .contacto_fondo-description {
+        width: 80%;
+        text-align: center;
+        font-weight: 200;
+    }
+    .contacto_form-container{
+        width: 90%;
+    }
+}
