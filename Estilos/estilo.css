@@ -7,15 +7,18 @@
     --title-font: 'Titillium Web', sans-serif;
     --text-font: 'Roboto', sans-serif;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(247,248,252,1) 84%, rgba(220,223,238,1) 100%);
 }
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
+
 p {
     font-family: 'Roboto', sans-serif;
 }
@@ -112,44 +115,7 @@ h3 {
     width: 30%;
     object-fit: contain;
 }
-/*----------------------------------------------------------Relojes----------------------------------------------------------*/
 
-.relojes-container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 70vh;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.relojes-imagenes {
-    height: 400px;
-    max-height: fit-content;
-    
-}
-.relojes-descripcion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    max-height: 300px;
-    width: 40%;
-    
-}
-.relojes-title {
-    color: var(--main-title-color);
-    font-size: 2em;
-    text-align: center;
-    padding-bottom: 10px;
-}
-.relojes-item {
-    color: var(--main-text-color);
-    list-style-type: circle;
-}
-.index_btn {
-    margin-top: 1.5em;
-}
 
 
 /*----------------------------------------------------------Camaras----------------------------------------------------------*/
@@ -217,95 +183,6 @@ h3 {
     text-align: center;
 }
 
-
-
-
-/*------------------------------------------------------------------Relojes-main-------------------------------------------------------*/
-.relojes_main-fondo{
-    background-image: url("/Imagenes/Producto-Fondo-mod.jpg");
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    height: 70vh;
-    width: 100%;
-}
-.titulo-relojes{
-    height: 2em;
-    width: 60%;
-    text-align: center;
-    border-bottom: solid 1px #aaa;
-    margin: 1em auto 0px auto;
-}
-.card_relojes-container {
-    display: flex;
-    max-height: 200vh;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: 1em auto;
-}
-.card {
-    margin: 1em 1em; 
-}
-.card-title {
-    font-family: var(--title-font);
-    color: var(--main-title-color);
-}
-.card-text {
-    color: var(--main-text-color);
-}
-.card-body {
-    background-color: var(--main-bg-color);
-    
-}
-.btn {
-    background-color: var(--main-banner-color);
-    font-family: var(--title-font);
-}
-/*-------------------------------------------------------------------- relojes 2da mitad-----------------------------------------------*/
-
-.relojes-main_container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2em;
-    color: var(--main-title-color);
-    height: 500px;
-}
-.relojes-main_description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-}
-.relojes-main_text {
-    text-align: center;
-    font-family: var(--text-font);
-    color: var(--main-text-color);
-    font-size: 1em;
-}
-.relojes-main_imagen{
-    position: relative;
-    height: 500px;
-    width: 30%;
-}
-.aim_1 {
-    position: absolute;
-    height: 300px;
-    width: 500px;
-    bottom: 15px;
-    left: 50px;
-    z-index: 1;
-}
-.aim_2 {
-    position: absolute;
-    height: 300px;
-    width: 500px;
-    right: 50px;
-    z-index: -1;
-}
 
 /*-----------------------------------------------------------------Camras-main-----------------------------------------------------*/
  
@@ -448,15 +325,159 @@ h3 {
     display: inline;
 }
 
+/*-----------------------------Slider-----------------------*/
+
+.swiper_slider-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFEF;
+    margin: 20px 0;
+}
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+.slide-content {
+    height: 500px;
+    margin:0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card {
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 15px 0;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 200px;
+    background: #FFF;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+}
+.description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+.button_slide1 {
+    border: none;
+    font-size: 16px;
+    color:#FFF;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    margin: 14px 14px 5px 14px;   
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button_slide2 {
+     border: none;
+     font-size: 16px;
+     color:#FFF;
+     padding: 8px 16px;
+     background-color: #4070F4;
+     border-radius: 6px;
+     margin: 5px 14px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     
+}
+.button_slide1:hover {
+    background-color: #265df2;
+}
+.button_slide2:hover {
+    background-color: #265df2;
+}
+
+.swiper-navBtn {
+    color: #6e93f7;
+    transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+    color: #4070F4;
+}
+
+.swiper-navBtn::before, .swiper-navBtn::after  {
+    font-size: 40px
+}
+
+.swiper-button-next {
+    right: 0;
+}
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-pagination-bullet {
+    background-color: #6e93f7;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: #4070F4
+}
+
+
+
 /*-----------------------------------------------------------------MediaQuery-------------------------------------------------------*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+    /*-----------------------------------------------------nav-------------------------------------------------------------*/
+    .nav-link:after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 5px;
+        left: 0;
+        background-color: var(--main-title-color);
+        transform-origin: bottom right; 
+        transition: transform 0.3s ease-out;
+    }
+    .nav-link:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+    /*------------------------------------------------------slider------------------------------------------------------------*/
+    .slide-content {
+        margin: 0 50px;
+    }
+    .swiper-navBtn {
+        display: none;
+    }
+    
     /*-------------------------------------------------------index-mobile------------------------------------------------------*/
     .main-img {
-        height: 40vh;
+        height: 300px;
         width: 100%;
-        background-size: 100% 100%;  
         background-attachment: scroll;
+        object-fit:contain;
     }
     .main-description {
         width: 90%;
@@ -501,45 +522,15 @@ h3 {
     }
     .ST_img-container {
         width: 80%;
+       
     }
-
-    /*-------------------------------------------------------relojes-main-mobile------------------------------------------------------*/
-
-    .relojes_main-fondo {
-        height: 40vh;
+    .ST_img {
+        height: auto;
         width: 100%;
-        background-size: 100% 100%;
-        background-attachment: scroll;
-        
+        object-fit: contain;
     }
-    .card_relojes-container {
-        max-height: 450vh;
-    }
+
     
-    .relojes-main_description {
-        margin-top: 2em;
-        width: 90%;
-        height: 30vh;
-    }
-    .relojes-main_imagen {
-        width: 80%;
-        height: 40vh;
-        margin-bottom: 1em;
-    }
-    
-    .aim_1 {
-        height: 175px;
-        width: 235px;
-        top: 10px;
-        
-        left: 60px;
-    }
-    .aim_2 {
-        bottom: 30px;
-        right: 80px;
-        height: 175px;
-        width: 235px;   
-    }
 
     /*-------------------------------------------------------camara-main-mobile------------------------------------------------------*/
     .camara-main_fondo{
