@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: #f7f8fc;
+    --main-bg-color: #EFEFEF;
     --main-contrast-color: #dcdfee;
     --main-text-color: #878a99;
     --main-banner-color: #545365;
@@ -14,9 +14,13 @@
     box-sizing: border-box;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 body {
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(247,248,252,1) 84%, rgba(220,223,238,1) 100%);
+   background-color: #EFEFEF !important;
 }
 
 p {
@@ -40,7 +44,11 @@ h3 {
 .navbar {
     display: flex;
     background-color:  transparent;
-    justify-content: flex-end;
+    justify-content: flex-end;  
+}
+.logo {
+    width: 30px;
+    height: 30px;
 }
 .nav-link {
     color: var(--main-title-color) !important;
@@ -71,7 +79,7 @@ h3 {
 /*----------------------------------------------------------Index----------------------------------------------------------*/
 
 .main-img {
-    background-image: url("/Imagenes/fondo-main-index.jpg");
+    background-image: url("/Imagenes/Producto-Fondo-mod.jpg");
     height: 70vh;
     background-size: 100% 100vh;
     background-repeat: no-repeat;
@@ -95,33 +103,34 @@ h3 {
     font-family: var(--text-font);
 }
 
-/*----------------------------------------------------------Servicio Tecnico----------------------------------------------------------*/
-
-.ST_container {
+.soluciones-container {
+    height: 80vh;
     width: 100%;
-    height: 70vh;
-    display: flex;
+    margin: 20px auto 0 auto;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    background-color: #4070F4;
+    color: #FFF;
 }
-.ST_description {
+.soluciones-description {
     display: flex;
-    flex-direction: column;  
-    justify-content: space-between;
-    align-items: center;  
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    
 }
-.ST_img-container {
-    max-height: 400px;
-    width: 30%;
+.soluciones_img-container {
+    width: 500px;
+    height: 400px;
     object-fit: contain;
 }
-
 
 
 /*----------------------------------------------------------Camaras----------------------------------------------------------*/
 
 .camaras-container {
-    height: 70vh;
+    max-height: 70vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -143,10 +152,10 @@ h3 {
 .camaras-title {
     color: var(--main-title-color);
     margin-bottom: 1em;
-    text-align: center;
+    text-align: left;
 }
 .camaras-texto {
-    text-align: center;
+    text-align:left;
     color: var(--main-text-color);
 }
 
@@ -325,7 +334,16 @@ h3 {
     display: inline;
 }
 
-/*-----------------------------Slider-----------------------*/
+/*-------------------------------------------------------------Slider-------------------------------------------------------*/
+
+.titulo-slide {
+    width: 90%;
+    position: relative;
+    top: 30px;
+    border-bottom: 0.5px solid #545365;
+    margin: 10px auto 0 auto;
+    padding-bottom: 5px;
+}
 
 .swiper_slider-container {
     min-height: 100vh;
@@ -334,6 +352,7 @@ h3 {
     justify-content: center;
     background-color: #EFEFEF;
     margin: 20px 0;
+    border-bottom: 1px solid #545365;
 }
 .slide-container {
     max-width: 1120px;
@@ -465,6 +484,9 @@ h3 {
       }
 
     /*------------------------------------------------------slider------------------------------------------------------------*/
+    .swiper_slider-container {
+        min-height: 70vh;
+    }    
     .slide-content {
         margin: 0 50px;
     }
@@ -475,6 +497,7 @@ h3 {
     /*-------------------------------------------------------index-mobile------------------------------------------------------*/
     .main-img {
         height: 300px;
+        background-size: cover;
         width: 100%;
         background-attachment: scroll;
         object-fit:contain;
@@ -482,18 +505,7 @@ h3 {
     .main-description {
         width: 90%;
     }
-    .relojes-container {
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-    }
-    .relojes-imagenes {
-        height: 30vh;
-        width: 100%;
-    }
-    .relojes-descripcion{
-        width: 90%;
-    }
+    
     .camaras-imagenes {
         height: 20vh;
         width: 80%;
@@ -502,34 +514,16 @@ h3 {
         display: none;
     }
     .camaras-container {
-        height: 100vh;
-        width: 100%;
-        
-        
+        height: 70vh;
+        width: 100%;  
+        overflow: hidden;
     }
     .camaras-descripcion {
         width: 80%;
         font-family: var(--text-font);
         margin: 1em auto;
     }
-    .ST_container {
-        width: 100%;
-        flex-direction: column;
-        height: 90vh;
-    }
-    .ST_description {
-        width: 90%;
-    }
-    .ST_img-container {
-        width: 80%;
-       
-    }
-    .ST_img {
-        height: auto;
-        width: 100%;
-        object-fit: contain;
-    }
-
+    
     
 
     /*-------------------------------------------------------camara-main-mobile------------------------------------------------------*/
