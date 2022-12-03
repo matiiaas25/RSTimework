@@ -62,7 +62,7 @@ h3 {
     height: 2px;
     bottom: 5px;
     left: 0;
-    background-color: var(--main-title-color);
+    background-color: #6e93f7;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -79,7 +79,7 @@ h3 {
 /*----------------------------------------------------------Index----------------------------------------------------------*/
 
 .main-img {
-    background-image: url("/Imagenes/Producto-Fondo-mod.jpg");
+    background-image: url("/Imagenes/Main-banner-blue.jpg");
     height: 70vh;
     background-size: 100% 100vh;
     background-repeat: no-repeat;
@@ -106,90 +106,64 @@ h3 {
 .soluciones-container {
     height: 80vh;
     width: 100%;
-    margin: 20px auto 0 auto;
+    margin: 0 auto 0 auto;
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: #4070F4;
-    color: #FFF;
+    background-color: #ddd;
+}
+.soluciones-title{
+    color: #222;
 }
 .soluciones-description {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 50%;
+    justify-content: space-around;
+    width: 40%;
+    height: 400px;
+    color: #999;
     
 }
 .soluciones_img-container {
-    width: 500px;
-    height: 400px;
-    object-fit: contain;
-}
-
-
-/*----------------------------------------------------------Camaras----------------------------------------------------------*/
-
-.camaras-container {
-    max-height: 70vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.camaras-imagenes {
-    width: 500px;
-    height: 200px;
-}
-.camaras-descripcion {
     width: 40%;
-    height: 400px;
+    height: 300px;
+}
+.soluciones-img {
+    object-fit: cover;
+}
+.soluciones-lista {
+    line-height: 50px;
+}
+
+/*----------------------------------------------------------servicios---------------------------------------------------------*/
+.titulo-servicio {
+    width: 90%;
+    position: relative;
+    border-bottom: 0.5px solid #EFEFEF;
+    margin: 10px auto 0 auto;
+    padding-bottom: 5px;
+    
+}
+.servicios-container {
+    width: 100%;
+    height: 250px;
+    background-color: #ddd;
+    color: #999;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: space-around;
 }
-.camaras-title {
-    color: var(--main-title-color);
-    margin-bottom: 1em;
-    text-align: left;
-}
-.camaras-texto {
-    text-align:left;
-    color: var(--main-text-color);
-}
-
-
-/*----------------------------------------------------------Contacto----------------------------------------------------------*/
-
-.contacto-container {
+.caja-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-around;
     align-items: center;
-    height: 600px;
 }
-.form-title{
-    padding: 10px;
-    margin-top: 2em;
-}
-.form-container {
-    width: 50%;
-    height: 400px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-.form-button{
-    padding: 10px;
-    display: block;
-    background-color: #222;
-    width: 10em;
-    color: white;
-    border-radius: 5px;
-    border-width: 0px;
-}
-.contacto_form-title {
-    text-align: center;
+.servicios-caja {
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
 }
 
 
@@ -247,7 +221,7 @@ h3 {
 /*-----------------------------------------------------------------contacto-------------------------------------------------------*/
 
 .contacto_fondo-container {
-    background-image: url("/Imagenes/Contacto-Fondo-mod.jpg");
+    background-image: url("/Imagenes/Contacto-Fondo-blue.jpg");
     background-position: contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -267,7 +241,7 @@ h3 {
 .contacto_form-container {
     width: 50%;
     max-height: 80vh;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -281,6 +255,7 @@ h3 {
     font-family: 'Titillium Web', sans-serif;
     color: var(--main-title-color);
     padding-bottom: 0.5em;
+    text-align: center;
    
 }
 .contacto_form-telephone-container{
@@ -351,8 +326,6 @@ h3 {
     align-items: center;
     justify-content: center;
     background-color: #EFEFEF;
-    margin: 20px 0;
-    border-bottom: 1px solid #545365;
 }
 .slide-container {
     max-width: 1120px;
@@ -484,6 +457,9 @@ h3 {
       }
 
     /*------------------------------------------------------slider------------------------------------------------------------*/
+    .titulo-slide {
+        top: 0;
+    }
     .swiper_slider-container {
         min-height: 70vh;
     }    
@@ -493,7 +469,34 @@ h3 {
     .swiper-navBtn {
         display: none;
     }
+
+    /*------------------------------------------------------soluciones------------------------------------------------------------*/
+
+    .soluciones-container {
+        flex-direction: column;
+    }
+    .soluciones-lista {
+        line-height: 30px;
+    }
+    .soluciones-description {
+        width: 90%;
+    }
+    .soluciones_img-container {
+        width: 90%;
+        
+    }
     
+    /*------------------------------------------------------servicios------------------------------------------------------------*/
+    .servicios-container{
+        min-height: 50vh;
+    }
+    .caja-container {
+        flex-wrap: wrap;
+    }
+    .servicios-caja {
+        margin: 5px 0;
+    }
+
     /*-------------------------------------------------------index-mobile------------------------------------------------------*/
     .main-img {
         height: 300px;
@@ -505,25 +508,6 @@ h3 {
     .main-description {
         width: 90%;
     }
-    
-    .camaras-imagenes {
-        height: 20vh;
-        width: 80%;
-        flex: 1;
-        order: -1;
-        display: none;
-    }
-    .camaras-container {
-        height: 70vh;
-        width: 100%;  
-        overflow: hidden;
-    }
-    .camaras-descripcion {
-        width: 80%;
-        font-family: var(--text-font);
-        margin: 1em auto;
-    }
-    
     
 
     /*-------------------------------------------------------camara-main-mobile------------------------------------------------------*/
