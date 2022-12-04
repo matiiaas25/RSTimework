@@ -121,7 +121,7 @@ h3 {
     justify-content: space-around;
     width: 40%;
     height: 400px;
-    color: #999;
+    color: #707070;
     
 }
 .soluciones_img-container {
@@ -432,9 +432,66 @@ h3 {
 .swiper-pagination-bullet-active {
     background-color: #4070F4
 }
+/*----------------------------------------------------------------Modal---------------------------------------------------------*/
 
+.modal {
+    display: none; /* por defecto, el modal está oculto */
+    position: fixed; /* fija la posición del modal en la pantalla */
+    z-index: 1; /* coloca el modal encima de todos los demás elementos de la página */
+    padding-top: 100px; /* distancia entre el modal y la parte superior de la pantalla */
+    left: 0;
+    top: 0;
+    width: 100%; /* el modal ocupa todo el ancho de la pantalla */
+    height: 100%; /* el modal ocupa toda la altura de la pantalla */
+    overflow: auto !important; /* habilita el desplazamiento en el modal si su contenido es demasiado largo */
+    background-color: rgba(0,0,0,0.4); /* colorea el fondo del modal con un degradado transparente */
+    
+  }
 
+  .modal-content {
+    background-color: #fefefe; /* colorea el fondo del contenido del modal con un color claro */
+    margin: auto; /* centra el contenido del modal en la pantalla */
+    padding: 20px; /* agrega un espacio de 20 pixels alrededor del contenido del modal */
+    border: 1px solid #888; /* agrega un borde al contenido del modal */
+    width: 80%; /* establece el ancho del contenido del modal en 80% del ancho de la pantalla */
+    max-width: 500px; /* establece el ancho máximo del contenido del modal en 500 pixels */
+  }
 
+  .modal-close-button {
+    color: #aaa; /* colorea el texto del botón de cierre con un color claro */
+    position: absolute; /* flota el botón de cierre a la derecha */
+    top: 0;
+    right: 0;
+    font-size: 28px; /* establece el tamaño del texto del botón de cierre en 28 pixels */
+    font-weight: bold; /* establece el grosor del texto del botón de cierre en bold */
+  }
+
+  .modal-close-button:hover,
+  .modal-close-button:focus {
+    color: black; /* colorea el texto del botón de cierre con un color oscuro al pasar el mouse sobre él o al darle foco */
+    text-decoration: none; /* quita cualquier subrayado del texto del botón de cierre */
+    cursor: pointer; /* cambia el cursor a una mano al pasar el mouse sobre el botón de cierre */
+  }
+
+  table {
+    border-collapse: collapse; /* elimina el espacio entre las celdas */
+    width: 100%; /* establece el ancho de la tabla en 100% */
+  }
+
+  th,
+  td {
+    text-align: left; /* alinea el texto de las celdas a la izquierda */
+    padding: 8px; /* agrega un espacio de 8 pixels alrededor del contenido de las celdas */
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* colorea las filas pares con un color claro */
+  }
+
+  th {
+    background-color: #4070F4 !important; /* colorea el fondo de la fila de encabezados con un color verde */
+    color: white; /* colorea el texto de la fila de encabezados con un color blanco */
+  }
 /*-----------------------------------------------------------------MediaQuery-------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {

@@ -28,6 +28,7 @@
 
       gtag('config', 'UA-242986419-1');
     </script>
+    
     <title>R&S timework | Inicio</title>
 </head>
 <body>
@@ -89,7 +90,8 @@
                       <h2 class="name">Anviz EP-300</h2>
                       <p class="description">Sistema de control de acceso y asistencia profesional diseñado para pequeñas a medianas empresas. Huella + Rfid + Clave. Hasta 2000 usuarios.</p>
                       
-                      <button class="button_slide1">Ver mas detalles</button>
+                      <button id="EP300" class="button_slide1 boton_modal-relojes">Ver mas detalles</button>
+                      
                       <button class="button_slide2">Consulta</button>
                   </div>
               </div>
@@ -104,7 +106,7 @@
                       <h2 class="name">Anviz A300</h2>
                       <p class="description">Sistema de control de acceso y asistencia profesional diseñado para pequeñas a medianas empresas. Huella + Rfid + Clave. Hasta 2000 usuarios.</p>
                       
-                      <button class="button_slide1">Ver mas detalles</button>
+                      <button id="A300" class="button_slide1 boton_modal-relojes">Ver mas detalles</button>
                       <button class="button_slide2">Consulta</button>
                   </div>
               </div>
@@ -119,7 +121,7 @@
                       <h2 class="name">Anviz Facepass 7 pro</h2>
                       <p class="description">Plataforma de detección de rostros, identificación y eventos en tiempo real puede implementarse fácilmente. Se puede realizar reconocimiento facial preciso en diversos entornos. WIFI RED Y USB.</p>
                       
-                      <button class="button_slide1">Ver mas detalles</button>
+                      <button id="Facepass7pro" class="button_slide1 boton_modal-relojes">Ver mas detalles</button>
                       <button class="button_slide2">Consulta</button>
                   </div>
               </div>
@@ -134,7 +136,7 @@
                       <h2 class="name">Anviz C2 Pro</h2>
                       <p class="description">Sistema de control de acceso y asistencia profesional. Huella + Rfid + Clave. Web Server. Hasta 5000 usuarios.</p>
                       
-                      <button class="button_slide1">Ver mas detalles</button>
+                      <button id="C2pro" class="button_slide1 boton_modal-relojes">Ver mas detalles</button>
                       <button class="button_slide2">Consulta</button>
                   </div>
               </div>
@@ -149,7 +151,7 @@
                       <h2 class="name">Anviz VF30</h2>
                       <p class="description">Sistema de control de acceso y asistencia profesional diseñado para pequeñas a medianas empresas. Huella + Rfid + Clave. Hasta 1000 usuarios.</p>
                       
-                      <button class="button_slide1">Ver mas detalles</button>
+                      <button id="VF30" class="button_slide1 boton_modal-relojes">Ver mas detalles</button>
                       <button class="button_slide2">Consulta</button>
                   </div>
               </div>
@@ -164,7 +166,7 @@
                       <h2 class="name">Anviz W2 pro</h2>
                       <p class="description">Con LCD a color de 2,8 pulgadas, los teclados táctiles completos y el sensor óptico de huellas dactilares ofrecerá una experiencia de operación conveniente y mejorará la practicidad de la huella digital húmeda y seca.</p>
                       
-                      <button class="button_slide1">Ver mas detalles</button>
+                      <button id="W2pro" class="button_slide1 boton_modal-relojes">Ver mas detalles</button>
                       <button class="button_slide2">Consulta</button>
                   </div>
               </div>
@@ -175,6 +177,13 @@
       <div class="lala-navBtn swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <!-- aquí se insertará el contenido del modal dinámicamente -->
+    </div>
+    <button class="modal-close-button">Cerrar</button>
   </div>
 
   <div class="servicios-container">
@@ -226,5 +235,7 @@
   <script src="JavaScript/swiper-bundle.min.js"></script>
   <!-- JavaScript -->
   <script src="/JavaScript/slider.js"></script>
+  <script src="/JavaScript/modal.js"></script>
 </body>
+
 </html>
